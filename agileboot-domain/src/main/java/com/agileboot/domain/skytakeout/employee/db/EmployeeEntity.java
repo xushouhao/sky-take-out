@@ -26,7 +26,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 
     @ApiModelProperty("员工ID")
     @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     @ApiModelProperty("姓名")
     @TableField("name")

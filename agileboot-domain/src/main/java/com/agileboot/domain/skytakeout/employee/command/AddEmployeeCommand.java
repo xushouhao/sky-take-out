@@ -1,5 +1,6 @@
 package com.agileboot.domain.skytakeout.employee.command;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PositiveOrZero;
@@ -7,31 +8,30 @@ import javax.validation.constraints.Size;
 import lombok.Data;
 
 /**
- * @author valarchie
+ * @author evil
  */
 @Data
 public class AddEmployeeCommand {
 
-    @NotBlank(message = "岗位编码不能为空")
-    @Size(max = 64, message = "岗位编码长度不能超过64个字符")
-    protected String postCode;
+    @NotBlank
+    @Schema(description = "员工姓名")
+    private String name;
 
-    /**
-     * 岗位名称
-     */
-    @NotBlank(message = "岗位名称不能为空")
-    @Size(max = 64, message = "岗位名称长度不能超过64个字符")
-    protected String postName;
+    @NotBlank
+    @Schema(description = "用户名")
+    private String username;
 
-    /**
-     * 岗位排序
-     */
-    @NotNull(message = "显示顺序不能为空")
-    protected Integer postSort;
+    @NotBlank
+    @Schema(description = "手机号")
+    private String phone;
 
-    protected String remark;
+    @NotBlank
+    @Schema(description = "性别")
+    private Integer sex;
 
-    @PositiveOrZero
-    protected String status;
+    @NotBlank
+    @Schema(description = "身份证号")
+    private String idNumber;
+
 
 }

@@ -15,12 +15,12 @@ public class EmployeeModelFactory {
 
     private final EmployeeService employeeService;
 
-    public EmployeeModel loadById(Long postId) {
-        EmployeeEntity byId = employeeService.getById(postId);
-        if (byId == null) {
-            throw new ApiException(Business.COMMON_OBJECT_NOT_FOUND, "职位");
+    public EmployeeModel loadById(Integer id) {
+        EmployeeEntity entity = employeeService.getById(id);
+        if (entity == null) {
+            throw new ApiException(Business.COMMON_OBJECT_NOT_FOUND, "员工");
         }
-        return new EmployeeModel(byId, employeeService);
+        return new EmployeeModel(entity, employeeService);
     }
 
     public EmployeeModel create() {

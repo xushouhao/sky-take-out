@@ -1,6 +1,8 @@
 package com.agileboot.domain.skytakeout.employee.model;
 
 import cn.hutool.core.bean.BeanUtil;
+import com.agileboot.domain.skytakeout.employee.command.AddEmployeeCommand;
+import com.agileboot.domain.skytakeout.employee.command.UpdateEmployeeCommand;
 import com.agileboot.domain.skytakeout.employee.db.EmployeeEntity;
 import com.agileboot.domain.skytakeout.employee.db.EmployeeService;
 import com.agileboot.domain.system.post.command.AddPostCommand;
@@ -27,17 +29,18 @@ public class EmployeeModel extends EmployeeEntity {
         this.employeeService = employeeService;
     }
 
-    public void loadFromAddCommand(AddPostCommand addCommand) {
-        if (addCommand != null) {
-            BeanUtil.copyProperties(addCommand, this, "postId");
-        }
-    }
-
-
-    public void loadFromUpdateCommand(UpdatePostCommand command) {
+    public void loadEmployeeAddCommand(AddEmployeeCommand command) {
         if (command != null) {
-            loadFromAddCommand(command);
+            BeanUtil.copyProperties(command, this, "id");
+        }
+        this.setPassword("123456");
+    }
+
+    public void loadEmployeeUpdateCommand(UpdateEmployeeCommand command) {
+        if (command != null) {
+            BeanUtil.copyProperties(command, this, "id");
         }
     }
+
 
 }
