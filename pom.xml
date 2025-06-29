@@ -10,9 +10,9 @@
     <!--  https://stackoverflow.com/questions/52173260/how-to-resolve-parent-pom-dependency-issue-failed-to-read-artifact-descriptor -->
     <version>1.0.0</version>
 
-    <name>agileboot</name>
+    <name>sky-take-out</name>
     <url>http://www.agileboot.vip</url>
-    <description>基于 springboot的快速开发系统</description>
+    <description>基于 aglieboot来重构苍穹外卖项目</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
