@@ -81,3 +81,4 @@ agileboot
 │                     ├────── MemberApplicationService -- 应用服务（事务层，操作领域模型类完成业务逻辑）
 └─
 ```
+前端暂时采用nginx反向代理来启动，后期在考虑是否需要重构
