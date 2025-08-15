@@ -1,6 +1,7 @@
 package com.agileboot.domain.skytakeout.employee.db;
 
 import com.agileboot.common.core.base.BaseEntity;
+import com.agileboot.domain.skytakeout.employee.enums.EmployeeSexEnum;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -46,7 +47,7 @@ public class EmployeeEntity extends BaseEntity<EmployeeEntity> {
 
     @ApiModelProperty("性别")
     @TableField("sex")
-    private String sex;
+    private EmployeeSexEnum sex;
 
     @ApiModelProperty("身份证号")
     @TableField("id_number")

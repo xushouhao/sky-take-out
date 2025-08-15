@@ -4,6 +4,8 @@ import cn.hutool.core.bean.BeanUtil;
 import com.agileboot.common.annotation.ExcelColumn;
 import com.agileboot.domain.skytakeout.employee.db.EmployeeEntity;
 import java.util.Date;
+
+import com.agileboot.domain.skytakeout.employee.enums.EmployeeSexEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +27,7 @@ public class EmployeeDTO extends EmployeeEntity{
     @ExcelColumn(name = "员工姓名")
     private String name;
 
+    private EmployeeSexEnum sex;
 
     @ExcelColumn(name = "员工账号")
     private String username;

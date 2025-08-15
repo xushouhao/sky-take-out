@@ -1,5 +1,6 @@
 package com.agileboot.domain.skytakeout.employee.command;
 
+import com.agileboot.domain.skytakeout.employee.enums.EmployeeSexEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -27,7 +28,7 @@ public class AddEmployeeCommand {
 
     @NotBlank
     @Schema(description = "性别")
-    private Integer sex;
+    private EmployeeSexEnum sex;
 
     @NotBlank
     @Schema(description = "身份证号")
